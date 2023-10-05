@@ -1,0 +1,51 @@
+<div class="swiper dimsog-slider {{ __SELF__ }}"
+     data-swiper-selector=".{{ __SELF__ }}"
+     data-swiper-pagination="{{ properties.pagination }}"
+     data-swiper-navigation="{{ properties.navigation }}"
+     data-swiper-loop="{{ properties.loop }}"
+     style="width: {{ properties.width }}; height: {{ properties.height }}">
+    <div class="swiper-wrapper">
+        {% for item in items %}
+            <div class="swiper-slide">
+                <div class="dimsog-slider-item {{ item.css_class }}" style="background-image: url({% if isMobile and item.mobile_image is not empty %}{{ item.mobile_image.path }}{% else %}{{ item.image.path }}{% endif %})">
+                    <div class="container dimsog-slider-item__container">
+                        <div class="row dimsog-slider-item__row">
+                            <div class="col-lg-12 dimsog-slider-item__text dimsog-slider-item__text--{{ properties.placement }}">
+                                <div>
+                                    <h3 class="dimsog-slider-item__name" style="color: {{ properties.name_color }}">{{ item.name }}</h3>
+
+                                    {% if item.sub_name is not empty %}
+                                    <h4 style="color: {{ properties.sub_name_color }}">{{ item.sub_name | raw }}</h4>
+                                    {% endif %}
+
+                                    {% if item.text is not empty %}
+                                    <div style="color: {{ properties.text_color }}">
+                                        {{ item.text | raw }}
+                                    </div>
+                                    {% endif %}
+
+                                    {% if item.link is not empty %}
+                                    <div class="dimsog-slider-item__button-wrapper">
+                                        <a href="{{ item.link }}" class="dimsog-slider-item__button">
+                                            {{ item.button_text }}
+                                        </a>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if properties.pagination %}
+    <div class="swiper-pagination"></div>
+    {% endif %}
+
+    {% if properties.navigation %}
+    <div class="swiper-button-next {{ __SELF__ }}-swiper-button-next"></div>
+    <div class="swiper-button-prev {{ __SELF__ }}-swiper-button-prev"></div>
+    {% endif %}
+</div>

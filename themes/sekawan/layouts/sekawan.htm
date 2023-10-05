@@ -1,0 +1,72 @@
+description = "Sekawan layout"
+
+[sf_page]
+==
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% placeholder page_title default %}{{ this.page.title }}{% endplaceholder %}</title>
+        {% partial "meta/styles" %}
+        {% partial "meta/seo" %}
+        <meta name="generator" content="Winter CMS">
+
+        {# Style CSS #}
+        <link rel="stylesheet" href="{{ 'assets/css/output.css' | theme }}">
+
+        {# G-Fonts CDN #}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    </head>
+    {% set pageId = this.page.id %}
+    {% set pageTitle = this.page.title %}
+    {% if pageId is empty %}
+        {% set pageId = page.id %}
+    {% endif %}
+    {% if pageTitle is empty %}
+        {% set pageTitle = page.title %}
+    {% endif %}
+    
+    <body class="page-{{ pageId }} layout-{{ this.layout.id }}">
+
+        <!-- Header -->
+        <header>
+            {% partial "components/navbar" %}
+        </header>
+
+            <!-- Content -->
+            <section>
+                {% page %}
+            </section>
+
+        <!-- Footer -->
+        <footer>
+            {% partial "components/footer" %}
+        </footer>
+
+            <!-- Scripts -->
+        <script src="{{ [
+            '@jquery',
+            '@framework',
+            '@framework.extras',
+
+            'assets/js/app.js',
+        ] | theme }}"></script>
+        {% scripts %}
+
+        {% flash %}
+            <p data-control="flash-message" data-interval="7" class="flashmessage {{ type }}">
+                {{ message }}
+            </p>
+        {% endflash %}
+
+        {# Flowbite JS CDN #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+        
+        {# Font Awesome Icons CDN #}
+        <script src="https://kit.fontawesome.com/366076fc40.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+[headAssets]
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<!doctype html>
+<html lang="en">
+    {# basic head structure #}
+    {% partial 'shared/head' %}
+    <body class="font-sans">
+            {% partial 'shared/header' %}
+                {% page %}
+            {% partial 'shared/foot' %}
+        {% partial 'shared/script' %}
+    </body>
+</html>

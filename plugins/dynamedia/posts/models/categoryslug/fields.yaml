@@ -1,0 +1,8 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: dynamedia.posts::lang.common.labels.id
+        disabled: true

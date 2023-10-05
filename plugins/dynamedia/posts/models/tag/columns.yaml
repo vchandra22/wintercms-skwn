@@ -1,0 +1,34 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+#    id:
+#        label: ID
+#        searchable: true
+    name:
+        label: dynamedia.posts::lang.common.labels.name
+        searchable: true
+    link:
+        label: dynamedia.posts::lang.common.labels.link
+        clickable: false
+        type: partial
+        align: center
+        sortable: false
+        path: ~/plugins/dynamedia/posts/models/tag/_url_link_column.htm
+    slug:
+        label: dynamedia.posts::lang.common.labels.slug
+        searchable: true
+    is_approved:
+        label: dynamedia.posts::lang.common.labels.approved
+        align: center
+        type: partial
+        path: ~/plugins/dynamedia/posts/models/tag/_is_approved_column.htm
+        sortable: false
+    published_posts_count:
+        label: dynamedia.posts::lang.common.labels.published_posts
+        sortable: false
+    unpublished_posts_count:
+        label: dynamedia.posts::lang.common.labels.unpublished_posts
+        sortable: false
+

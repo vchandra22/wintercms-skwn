@@ -1,0 +1,50 @@
+tabs:
+    fields:
+        cms_partial:
+            label: dynamedia.posts::lang.blocks.labels.cms_partial_block
+            tab: dynamedia.posts::lang.common.tabs.main
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getCmsPartialOptions
+            emptyOption: dynamedia.posts::lang.blocks.empty.cms_partial_block
+        data:
+            label: dynamedia.posts::lang.blocks.labels.partial_data
+            tab: dynamedia.posts::lang.blocks.tabs.data
+            type: repeater
+            form:
+                fields:
+                    key:
+                        label: dynamedia.posts::lang.blocks.labels.partial_data_key
+                        span: left
+                    value:
+                        label: dynamedia.posts::lang.blocks.labels.partial_data_value
+                        span: right
+
+        in_contents:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            type: switch
+            label: dynamedia.posts::lang.blocks.labels.in_contents
+            default: false
+
+        contents_title:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            span: left
+            label: dynamedia.posts::lang.blocks.labels.contents_title
+
+        block_id:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            span: right
+            label: dynamedia.posts::lang.blocks.labels.block_id
+            preset: contents_title
+
+        _preview_refresh:
+            tab: dynamedia.posts::lang.common.tabs.preview
+            type: switch
+            label: dynamedia.posts::lang.common.labels.refresh
+            span: right
+            cssClass: preview_button
+
+        _preview:
+            tab: dynamedia.posts::lang.common.tabs.preview
+            type: partial
+            path: $/dynamedia/posts/views/repeaterbody/preview/_cms_partial_block_preview.htm
+            dependsOn: [cms_partial, _preview_refresh]

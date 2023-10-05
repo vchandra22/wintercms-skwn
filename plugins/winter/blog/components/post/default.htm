@@ -1,0 +1,95 @@
+{% set post = __SELF__.post %}
+
+<div class="relative z-10">
+    <div class="relative h-80 overflow-y-hidden overflow-x-hidden md:h-[550px]">
+        <div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-[#102E61] bg-opacity-50"></div>
+                <div>
+                    {% if post.featured_images.count %}
+                        <div class="featured-images text-center">
+                            {% for image in post.featured_images %}
+                                <p>
+                                    <img
+                                        data-src="{{ image.filename }}"
+                                        src="{{ image.path }}"
+                                        alt="{{ image.description }}"
+                                        class="w-full h-full animate-flip-down animate-duration-700 animate-delay-150"
+                                        style="max-width: 100%" />
+                                </p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="absolute inset-0 block max-w-screen-xl mx-auto mt-20 space-y-4 transform text-start md:mt-28 md:space-y-4 md:pr-60">
+                <h1 class="w-full text-lg font-bold text-white md:text-5xl md:align-middle mt-20">{{ post.title}}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="min-h-screen">
+    <div class="top-0 left-0 right-0 z-30 flex justify-center max-w-screen-xl mx-auto md:-mt-24">
+        <div class="z-30 w-full md:flex md:grid-cols-6" style="border: 1px solid red">
+            <div class="w-1/3 col-span-2 p-8 bg-white rounded-none" style="border: 1px solid cyan">
+                <div class="grid content-between grid-cols-1 gap-4">
+                    <div>
+                        <div class="flex justify-between items-center space-x-4 text-[#102E61] text-md font-light" style="font-family: 'Roboto';">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-user"></i>
+                                <p>{{ post.user.first_name }}</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p>
+                                    {{ post.published_at }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-9">
+                            <h5 class="mb-2 text-xl font-medium pb-2 uppercase text-[#102E61]" style="font-family: 'Ubuntu';">
+                                Daftar Isi
+                            </h5>
+                            <hr></hr>
+                        </div>
+                        <ul class="text-[#102E61] font-regular text-sm space-y-4 mt-8">
+                            <li><a href="#">Pengertian</a></li>
+                            <li><a href="#">Deskripsi</a></li>
+                            <li><a href="#">Manfaat</a></li>
+                            <li><a href="#">Contoh</a></li>
+                            <li><a href="#">Cara Menggunakan</a></li>
+                            <li><a href="#">Perbedaan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+            <div class="w-2/3 col-span-4 bg-white rounded-none">
+                <div class="flex items-center justify-between space-x-0">
+                    <div class="flex justify-start items-center">
+                        <a href="/" class="text-sm font-medium text-blue-900 uppercase">{{ category.name }}</a>
+                    </div>
+                    <div class="flex justify-end items-center">
+                        <a href="#" class="px-12 py-8 transition duration-300 ease-in-out bg-gray-300 group hover:bg-gray-400">
+                            <div class="text-sm font-medium text-blue-900 uppercase">Salin URL<i class="pl-2 fa-regular fa-copy"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="px-12 py-8 transition duration-300 ease-in-out bg-yellow-200 group hover:bg-gray-400">
+                            <div class="text-sm font-medium text-blue-900 uppercase">Bagikan <i class="pl-2 fa-solid fa-share-nodes"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="px-8">
+                    <div class="block w-full p-6 space-y-4 bg-white">
+                        <div>
+                            <p class="font-[400] leading-7 text-gray-500 text-[17px]">
+                                <div class="content prose">{{ post.content_html | raw }}</div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

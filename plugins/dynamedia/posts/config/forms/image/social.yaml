@@ -1,0 +1,16 @@
+secondaryTabs:
+    fields:
+        facebook:
+            tab: dynamedia.posts::lang.images.tabs.facebook
+            type: mediafinder
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+            comment: dynamedia.posts::lang.images.comments.facebook
+        twitter:
+            tab: dynamedia.posts::lang.images.tabs.twitter
+            type: mediafinder
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+            comment: dynamedia.posts::lang.images.comments.twitter

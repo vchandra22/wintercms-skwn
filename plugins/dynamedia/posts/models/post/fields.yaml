@@ -1,0 +1,124 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+    fields:
+        title:
+            tab: dynamedia.posts::lang.common.tabs.detail
+            span: left
+            label: dynamedia.posts::lang.common.labels.title
+
+        slug:
+            tab: dynamedia.posts::lang.common.tabs.detail
+            span: right
+            label: dynamedia.posts::lang.common.labels.slug
+            preset: title
+
+        excerpt:
+            tab: dynamedia.posts::lang.common.tabs.detail
+            label: dynamedia.posts::lang.common.labels.excerpt
+            type: richeditor
+            size: huge
+
+        images:
+            tab: dynamedia.posts::lang.common.tabs.images
+            type: nestedform
+            usePanelStyles: false
+            form: $/dynamedia/posts/config/forms/image/main_image.yaml
+
+        body_document:
+            tab: dynamedia.posts::lang.common.tabs.body
+            type: nestedform
+            usePanelStyles: false
+            showPanel: false
+            form: $/dynamedia/posts/config/forms/body/body_type_post.yaml
+
+
+        primary_category:
+            tab: dynamedia.posts::lang.posts.tabs.categories
+            label: dynamedia.posts::lang.posts.labels.primary_category
+            type: relation
+            emptyOption: dynamedia.posts::lang.common.dropdown.none
+            comment: dynamedia.posts::lang.posts.comments.primary_category
+
+        categories:
+            tab: dynamedia.posts::lang.posts.tabs.categories
+            label: dynamedia.posts::lang.posts.labels.category_list
+            type: relation
+
+        tags:
+            tab: dynamedia.posts::lang.posts.tabs.tags
+            label: dynamedia.posts::lang.posts.labels.tags
+            type: taglist
+            mode: relation
+
+        seo:
+            tab: dynamedia.posts::lang.common.tabs.seo
+            type: nestedform
+            usePanelStyles: false
+            form: $/dynamedia/posts/config/forms/seo.yaml
+
+        translations@update:
+            tab: dynamedia.posts::lang.common.tabs.translations
+            type: partial
+            path: $/dynamedia/posts/models/post/_translation_relation.htm
+
+        locale:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            label: dynamedia.posts::lang.common.labels.primary_locale
+            type: relation
+
+        author:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            label: dynamedia.posts::lang.common.labels.author
+            span: left
+            type: relation
+            select: concat(first_name, ' ', last_name)
+            emptyOption: dynamedia.posts::lang.common.dropdown.empty_option
+
+
+        editor:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            label: dynamedia.posts::lang.common.labels.editor
+            span: right
+            type: relation
+            select: concat(first_name, ' ', last_name)
+            emptyOption: dynamedia.posts::lang.common.dropdown.empty_option
+
+        cms_layout:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            label: dynamedia.posts::lang.common.labels.cms_layout
+            type: dropdown
+            default: '__inherit__'
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getCmsLayoutOptions
+
+        is_published:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            span: left
+            label: dynamedia.posts::lang.posts.labels.is_published
+            type: switch
+            default: off
+
+        show_contents:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            span: right
+            label: dynamedia.posts::lang.posts.labels.show_contents
+            type: switch
+            default: off
+
+        published_at:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            label: dynamedia.posts::lang.posts.labels.published_at
+            type: datepicker
+            comment: dynamedia.posts::lang.posts.comments.published_at
+
+        published_until:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            label: dynamedia.posts::lang.posts.labels.published_until
+            type: datepicker
+            comment: dynamedia.posts::lang.posts.comments.published_until
+
+        postslugs:
+            tab: dynamedia.posts::lang.common.tabs.slugs
+            type: partial
+            path: $/dynamedia/posts/models/post/_postslugs_relation.htm

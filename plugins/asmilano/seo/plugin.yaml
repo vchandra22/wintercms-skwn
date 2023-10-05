@@ -1,0 +1,23 @@
+plugin:
+    name: 'Arcane SEO (Winter)'
+    description: 'Magically manage the SEO of your site'
+    author: 'Arcane / AS Milano'
+    icon: icon-search
+    replaces:
+        'Arcane.Seo': '<=1.1.20'
+permissions:
+    arcane.seo.config:
+        tab: 'arcane.seo::lang.plugin.name'
+        label: 'Access Arcane SEO configuration'
+    arcane.seo.og:
+        tab: 'arcane.seo::lang.plugin.name'
+        label: 'Access Open Graph tab'
+    arcane.seo.sitemap:
+        tab: 'arcane.seo::lang.plugin.name'
+        label: 'Access Sitemap tab'
+    arcane.seo.meta:
+        tab: 'arcane.seo::lang.plugin.name'
+        label: 'Access Meta tab'
+    arcane.seo.schema:
+        tab: 'arcane.seo::lang.plugin.name'
+        label: 'Access Schema tab'

@@ -1,0 +1,67 @@
+tabs:
+    fields:
+        operator_type:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.detail
+            label: dynamedia.posts::lang.theme_form_config.labels.operator_type
+            type: dropdown
+            options:
+                person: dynamedia.posts::lang.theme_form_config.options.person
+                organization: dynamedia.posts::lang.theme_form_config.options.organization
+        name:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.detail
+            label: dynamedia.posts::lang.theme_form_config.labels.name
+
+        logo:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.detail
+            label: dynamedia.posts::lang.theme_form_config.labels.logo
+            type: mediafinder
+
+        address_street:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.address
+            label: dynamedia.posts::lang.theme_form_config.labels.address_street
+
+        address_city:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.address
+            label: dynamedia.posts::lang.theme_form_config.labels.address_city
+
+        address_region:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.address
+            label: dynamedia.posts::lang.theme_form_config.labels.address_region
+
+        address_postal_code:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.address
+            label: dynamedia.posts::lang.theme_form_config.labels.address_postcode
+
+        address_country:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.address
+            label: dynamedia.posts::lang.theme_form_config.labels.address_country
+
+        address_latitude:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.address
+            label: dynamedia.posts::lang.theme_form_config.labels.address_latitude
+
+        address_longitude:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.address
+            label: dynamedia.posts::lang.theme_form_config.labels.address_longitude
+
+        contact_telephone:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.contact
+            label: dynamedia.posts::lang.theme_form_config.labels.contact_telephone
+
+        contact_email:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.contact
+            label: dynamedia.posts::lang.theme_form_config.labels.contact_email
+
+        contact_fax:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.contact
+            label: dynamedia.posts::lang.theme_form_config.labels.contact_fax
+
+        social_facebook:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.social
+            label: dynamedia.posts::lang.theme_form_config.labels.facebook_url
+            placeholder: dynamedia.posts::lang.theme_form_config.placeholders.facebook_url
+
+        social_twitter:
+            tab: dynamedia.posts::lang.theme_form_config.tabs.social
+            label: dynamedia.posts::lang.theme_form_config.labels.twitter_handle
+            placeholder: dynamedia.posts::lang.theme_form_config.placeholders.twitter_handle

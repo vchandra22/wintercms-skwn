@@ -1,0 +1,19 @@
+1.0.1:
+      - First version of Seo Extension
+1.0.2:
+      - Bug fixes
+1.0.3:
+      - Backend Settings added to configure meta tags & Open Graph tags added
+1.0.4:
+      - Code clean up and change path naming in settings model
+1.0.5:
+      - Add Turkish, Russian, cs_CZ locale
+1.0.6:
+      - Fix issue of SEO Settings Errors
+1.0.7:
+      - adds multilanguage support
+1.0.8:
+      - removes adding fields to blog posts table on update
+1.0.9:
+      - fallback to meta_title and meta_description if seo_title or seo_description are empty
+      - adds option to hide meta_title and meta_description

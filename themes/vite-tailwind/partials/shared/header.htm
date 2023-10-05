@@ -1,0 +1,343 @@
+[viewBag]
+
+[staticMenu topBar]
+code = "topbar"
+==
+{% partial 'menu-topbar' items=topBar.menuItems %}
+
+<nav class="bg-white border-gray-300 border-b-none">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl pl-4 mx-auto">
+        <a href="/" class="flex items-center w-1/3 my-3">
+            <div>
+                <img src="{{ 'assets/img/logo-sekawan.png' | theme }}" class="w-auto md:w-[128px] xl:w-[128px]" alt="">
+            </div>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button"
+            class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Main Menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+        </button>
+        <div>
+            <div id="main-nav" class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col items-center h-full px-4 mt-4 font-medium md:space-x-6 md:p-0 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li class="flex items-center h-16 group">
+                        <a href="/"
+                            class="block text-[17px] uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 group-hover:text-blue-900 md:p-0 md:space-x-4">
+                            <span
+                                class="garis_nav hover:border-b-4 hover:border-[#102E61] hover:pb-[20px]">Layanan</span>
+                        </a>
+                        <i
+                            class="fa-solid fa-chevron-down ml-2 mr-4 text-[#102E61] rotate-180 group-hover:rotate-0 group-hover:text-blue-900"></i>
+                        <div id="dropdown"
+                            class="absolute -z-10 left-0 w-full duration-300 transform bg-white h-[500px] -inset-y-[570px] group-hover:inset-y-28">
+                        </div>
+                        <div
+                            class="absolute top-0 bg-white left-0 z-50 hidden w-full my-auto transform group-hover:block md:mt-[120px] transition delay-700">
+                            <div class="grid max-w-screen-xl grid-cols-3 p-10 mx-auto">
+                                <div class="col-span-2 space-y-8">
+                                    <h3 class="text-start text-xl text-[#102E61] font-semibold uppercase"
+                                        style="font-family: 'Ubuntu';">
+                                        Layanan
+                                    </h3>
+                                    <div class="pr-20">
+                                        <hr class="border-gray-300 sm:mx-auto" />
+                                    </div>
+                                    <div class="grid items-center grid-cols-2">
+                                        <div class="px-8 py-4 space-y-12 cols-1">
+                                            <p class="font-normal text-[#7a7a7a] text-[14px] leading-6"
+                                                style="font-family: 'Ubuntu';">
+                                                Melayani
+                                                berbagai
+                                                kebutuhan
+                                                pembuatan aplikasi
+                                                dan website yang menjangkau area UMKM hingga bisnis berskala
+                                                Enterprise.
+                                            </p>
+                                            <div class="flex items-end justify-between">
+                                                <div class="relative -mt-2 space-y-0 group/selengkapnya">
+                                                    <a href=""
+                                                        class="w-1/4 text-[15px] uppercase font-[500] text-blue-950">
+                                                        Selengkapnya
+                                                    </a>
+                                                    <div
+                                                        class="absolute left-0 right-0 h-[1px] bg-[#102E61] w-1/3 hover:transition group-hover/selengkapnya:duration-500 group-hover/selengkapnya:ease-in-out group-hover/selengkapnya:w-full">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mx-4 cols-1">
+                                            <ul class="space-y-8 font-[400] text-[14px]" style="font-family: 'Ubuntu';">
+                                                <li>
+                                                    <a href="#"
+                                                        class="text-[#09182c] hover:transition group-hover:duration-500 group-hover:ease-in-out hover:text-teal-600">
+                                                        Jasa Pembuatan Aplikasi Web
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="text-[#09182c] hover:transition group-hover:duration-500 group-hover:ease-in-out hover:text-teal-600">
+                                                        Jasa Pembuatan Aplikasi Mobile
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="text-[#09182c] hover:transition group-hover:duration-500 group-hover:ease-in-out hover:text-teal-600">
+                                                        Jasa Pembuatan Website
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mx-auto space-y-2.5 col-1">
+                                    <div>
+                                        <div class="relative" style="border: 1px solid black">
+                                            <div class="absolute inset-0 bg-[#102E61] bg-opacity-50">
+                                            </div>
+                                                <img src="{{ 'assets/img/carousel-img_2.jpg' | theme }}" class="w-[452px] h-[200px] object-cover bg-cover" alt="">
+                                            <div class="absolute inset-0 flex items-center">
+                                                <div class="px-6 my-auto" style="font-family: 'Roboto';">
+                                                    <div class="mb-3">
+                                                        <h4 class="text-[18px] font-[500] text-white text-start"
+                                                            style="font-family: 'Ubuntu';">
+                                                            Sistem
+                                                            Monitoring Internal Audit MIND ID</h4>
+                                                    </div>
+                                                    <div class="space-y-1">
+                                                        <p class="font-normal text-white text-start">MIND ID</p>
+                                                        <p class="font-normal text-white text-start">2022</p>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <a href="#"
+                                                            class="text-black bg-white hover:bg-[#102E61] hover:text-white font-normal text-sm px-6 py-3">Selengkapnya</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-[#33CDB2] bg-opacity-50"></div>
+                                                <img src="{{ 'assets/img/carousel-img_2.jpg' | theme }}" class="w-[452px] h-[200px] object-cover bg-cover" alt="">
+                                            <div class="absolute inset-0 flex items-center">
+                                                <div class="px-6 my-auto" style="font-family: 'Roboto';">
+                                                    <div class="mb-3">
+                                                        <h4 class="text-[18px] font-[500] text-white text-start"
+                                                            style="font-family: 'Ubuntu';">
+                                                            Aplikasi
+                                                            SMSCrops Syngenta</h4>
+                                                    </div>
+                                                    <div class="space-y-1">
+                                                        <p class="font-[400] text-[15px] text-white text-start">PT
+                                                            Syngenta Seed
+                                                            Indonesia</p>
+                                                        <p class="font-[400] text-[15px] text-white text-start">
+                                                            2018
+                                                    </div>
+                                                    </p>
+                                                    <div class="mt-4">
+                                                        <a href="#"
+                                                            class="text-black bg-white hover:bg-[#102E61] hover:text-white font-normal text-sm px-6 py-3">Selengkapnya</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex items-center h-16 group">
+                        <a href="#"
+                            class="block text-[17px] uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover:text-blue-900 md:p-0 md:space-x-4">
+                            <span
+                                class="garis_nav hover:border-b-4 hover:border-[#102E61] hover:pb-[20px]">Solusi</span>
+                        </a>
+                        <i
+                            class="fa-solid fa-chevron-down ml-2 mr-4 text-[#102E61] rotate-180 group-hover:rotate-0 group-hover:text-blue-900"></i>
+                        <div id="dropdown"
+                            class="absolute -z-10 left-0 w-full duration-300 transform bg-white h-[500px] -inset-y-[570px] group-hover:inset-y-28">
+                        </div>
+                        <div
+                            class="absolute top-0 bg-white left-0 z-50 hidden w-full my-auto transform group md:hidden group-hover:md:block md:mt-[120px] transition delay-700">
+                            <div class="max-w-screen-xl mx-auto my-auto min-h-[546px] p-10 grid grid-cols-4">
+                                <div class="col-1">
+                                    <ul class="px-0 tracking-wide text-[14px] font-[700] bg-white upeercase text-start"
+                                        style="font-family: 'Roboto';">
+                                        <li>
+                                            <a href
+                                                class="flex justify-between items-center bg-[#102E61] text-white px-4 py-3 uppercase">
+                                                <p>Office</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href
+                                                class="flex items-center justify-between px-4 py-3 text-black uppercase bg-white hover:bg-blue-200/20">
+                                                <p>Business</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href
+                                                class="flex items-center justify-between px-4 py-3 text-black uppercase bg-white hover:bg-blue-200/20">
+                                                <p>Manufacture</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href
+                                                class="flex items-center justify-between px-4 py-3 text-black uppercase bg-white hover:bg-blue-200/20">
+                                                <p>Others</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="px-4 py-2 space-y-12 col-1">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-[18px] font-[700] text-black capitalize text-start"
+                                                style="font-family: 'Ubuntu';">
+                                                Administration</h1>
+                                        </div>
+                                        <div>
+                                            <ul class="space-y-4 text-[14px] font-[400]"
+                                                style="font-family: 'Roboto';">
+                                                <li
+                                                    class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">E-Office</a>
+                                                </li>
+                                                <li
+                                                    class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Document Management</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-[18px] font-[700] text-black text-start"
+                                                style="font-family: 'Ubuntu';">GRC</h1>
+                                        </div>
+                                        <div>
+                                            <ul class="space-y-4 text-[14px] font-[400]"
+                                                style="font-family: 'Roboto';">
+                                                <li
+                                                    class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Audit Management</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-4 py-2 space-y-12 col-1">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-[18px] font-[700] text-black capitalize text-start"
+                                                style="font-family: 'Ubuntu';">
+                                                Operations</h1>
+                                        </div>
+                                        <div>
+                                            <ul class="space-y-4 text-[14px] font-[400]"
+                                                style="font-family: 'Roboto';">
+                                                <li
+                                                    class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Fleet Management</a>
+                                                </li>
+                                                <li
+                                                    class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Visitor Management</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-[18px] font-[700] text-black text-start"
+                                                style="font-family: 'Ubuntu';">HR</h1>
+                                        </div>
+                                        <div>
+                                            <ul class="space-y-4 text-[14px] font-[400]"
+                                                style="font-family: 'Roboto';">
+                                                <li
+                                                    class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Learning Management </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-2 py-2 space-y-4 col-1">
+                                    <div>
+                                        <h1 class="font-[700] text-black text-[18px] text-start"
+                                            style="font-family: 'Ubuntu';">OUR PORTOFOLIO</h1>
+                                    </div>
+                                    <div>
+                                        <div class="relative">
+                                            <div class="w-[auto] h-auto bg-slate-200">
+                                                <div class="inset-0 flex items-center">
+                                                    <div class="px-2 py-3 my-auto space-y-2">
+                                                        <h4 class="font-[500] text-[#09182c] text-start text-[15px]">
+                                                            Sistem Monitoring Internal Audit MIND ID</h4>
+                                                        <p class="font-normal text-[#7a7a7a] text-start text-md">
+                                                            MIND ID - 2022</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="relative">
+                                            <div class="w-auto h-auto bg-slate-200">
+                                                <div class="inset-0 flex items-center">
+                                                    <div class="px-2 py-3 my-auto space-y-2">
+                                                        <h4 class="font-[500] text-[#09182c] text-start text-[15px]">
+                                                            Timah Internal Audit Management System</h4>
+                                                        <p class="font-normal text-[#7a7a7a] text-start text-md">PT
+                                                            Timah Tbk - 2020</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="flex items-center group">
+                        <a href="#"
+                            class="block text-[17px] uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-900 md:p-0 md:space-x-4">
+                            <span class="garis_nav hover:border-b-4 hover:border-[#102E61] hover:pb-[20px]">Tentang
+                                Kami</span>
+                        </a>
+                    </li>
+                    <li class="flex items-center group">
+                        <a href="#"
+                            class="block text-[17px] uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-900 md:p-0 md:space-x-4">
+                            <span
+                                class="garis_nav hover:border-b-4 hover:border-[#102E61] hover:pb-[20px]">Portofolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="min-w-full bg-[#102E61] h-16 flex items-center hover:bg-blue-950">
+                            <a href="/contact"
+                                class="block pl-3 pr-4 text-white rounded py-auto md:border-0 md:hover:text-white md:p-0">
+                                <span class="px-4 py-3">
+                                    HUBUNGI KAMI
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

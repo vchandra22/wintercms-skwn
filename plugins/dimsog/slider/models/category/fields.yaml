@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    active:
+        type: switch
+        label: dimsog.slider::lang.models.category.form.active
+        default: 1
+    parent:
+        label: dimsog.slider::lang.models.category.form.parent
+        showSearch: true
+        relation: Category
+        type: relation
+        order: position
+        default: null
+        emptyOption: dimsog.slider::lang.models.category.form.emptyOption
+        required: 1
+    name:
+        label: dimsog.slider::lang.models.category.form.name
+        required: 1

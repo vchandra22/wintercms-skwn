@@ -1,0 +1,21 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+translations:
+    label: dynamedia.posts::lang.common.labels.translations
+    view:
+        list: $/dynamedia/posts/models/posttranslation/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/dynamedia/posts/models/posttranslation/fields.yaml
+        recordsPerPage: 10
+
+postslugs:
+    label: dynamedia.posts::lang.common.labels.slugs
+    view:
+        list: $/dynamedia/posts/models/postslug/columns.yaml
+        toolbarButtons: delete
+    manage:
+        form: $/dynamedia/posts/models/postslug/fields.yaml
+        recordsPerPage: 10

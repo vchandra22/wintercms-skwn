@@ -1,0 +1,15 @@
+{% set posts = __SELF__.posts %}
+
+<h1>Post List Properties</h1>
+<p>
+    This plugin component ({{ __SELF__.alias }}) provides default markup as a convenience to developers but should be overridden by the theme (<a href="https://wintercms.com/docs/cms/components#overriding-partials" target="_blank">Winter CMS Docs</a>).
+    <br>
+    <br>
+    To view and download a completed theme to help with implementation, please see <a href="https://oc-posts.dynamedia.uk" target="_blank">oc-posts.dynamedia.uk</a> and <a href="https://github.com/Dynamedia/oc-posts-demo" target="_blank">Github</a>.
+    The demo theme is MIT licensed and is therefore free to modify and redistribute.
+</p>
+
+<h2>Post List (First Item)</h2>
+<p>Dumping the first item of the post list</p>
+
+{{ dump(posts.first | modelToArray) }}

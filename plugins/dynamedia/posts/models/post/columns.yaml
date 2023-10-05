@@ -1,0 +1,45 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+#    id:
+#        label: ID
+#        searchable: true
+    title:
+        label: dynamedia.posts::lang.common.labels.title
+        searchable: true
+    link:
+        label: dynamedia.posts::lang.common.labels.link
+        clickable: false
+        type: partial
+        align: center
+        sortable: false
+        path: ~/plugins/dynamedia/posts/models/post/_url_link_column.htm
+    primary_category:
+        label: dynamedia.posts::lang.posts.labels.primary_category
+        relation: primary_category
+        valueFrom: name
+        sortable: false
+    author:
+        label: dynamedia.posts::lang.posts.labels.author
+        relation: author
+        sortable: false
+        valueFrom: profile[full_name]
+
+    editor:
+        label: dynamedia.posts::lang.posts.labels.editor
+        relation: editor
+        sortable: false
+        valueFrom: profile[full_name]
+
+    is_published:
+        label: dynamedia.posts::lang.posts.labels.is_published
+        type: partial
+        align: center
+        path: ~/plugins/dynamedia/posts/models/post/_is_published_column.htm
+
+    published_at:
+        label: dynamedia.posts::lang.posts.labels.publishing_time
+        type: datetime
+

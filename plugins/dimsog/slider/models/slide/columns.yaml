@@ -1,0 +1,27 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+        width: '60px'
+    image:
+        label: dimsog.slider::lang.models.slide.columns.image
+        type: partial
+        path: ~/plugins/dimsog/slider/models/slide/_image.htm
+        sortable: false
+        width: '64px'
+    name:
+        label: dimsog.slider::lang.models.slide.columns.name
+        searchable: true
+    category:
+        label: dimsog.slider::lang.models.slide.columns.category
+        relation: category
+        select: name
+    active:
+        type: switch
+        label: dimsog.slider::lang.models.slide.columns.active
+    position:
+        label: dimsog.slider::lang.models.slide.columns.position

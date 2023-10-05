@@ -1,0 +1,24 @@
+items:
+    -
+        title: Blog
+        type: url
+        url: /blog
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Karir
+        nesting: false
+        type: url
+        url: /karir
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: false
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: Topbar

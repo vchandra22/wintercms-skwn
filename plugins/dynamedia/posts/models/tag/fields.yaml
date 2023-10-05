@@ -1,0 +1,76 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    fields:
+        name:
+            label: dynamedia.posts::lang.common.labels.name
+            tab: dynamedia.posts::lang.common.tabs.detail
+            span: left
+
+        slug:
+            label: dynamedia.posts::lang.common.labels.slug
+            tab: dynamedia.posts::lang.common.tabs.detail
+            span: right
+            preset: name
+
+        excerpt:
+            tab: dynamedia.posts::lang.common.tabs.detail
+            label: dynamedia.posts::lang.common.labels.excerpt
+            type: richeditor
+            size: huge
+
+        images:
+            tab: dynamedia.posts::lang.common.tabs.images
+            type: nestedform
+            usePanelStyles: false
+            form: $/dynamedia/posts/config/forms/image/main_image.yaml
+
+        body_document:
+            tab: dynamedia.posts::lang.common.tabs.body
+            type: nestedform
+            usePanelStyles: false
+            showPanel: false
+            form: $/dynamedia/posts/config/forms/body/body_type_category_tag.yaml
+
+        seo:
+            tab: dynamedia.posts::lang.common.tabs.seo
+            type: nestedform
+            usePanelStyles: false
+            form: $/dynamedia/posts/config/forms/seo.yaml
+
+        posts:
+            label: dynamedia.posts::lang.common.labels.posts
+            tab: dynamedia.posts::lang.common.tabs.posts
+            type: relation
+            select: title
+
+        translations@update:
+            tab: dynamedia.posts::lang.common.tabs.translations
+            type: partial
+            path: $/dynamedia/posts/models/tag/_translation_relation.htm
+
+        tagslugs:
+            tab: dynamedia.posts::lang.common.tabs.slugs
+            type: partial
+            path: $/dynamedia/posts/models/tag/_tagslugs_relation.htm
+
+        cms_layout:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            label: dynamedia.posts::lang.common.labels.cms_layout
+            type: dropdown
+            default: '__inherit__'
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getCmsLayoutOptions
+
+        is_approved:
+            label: dynamedia.posts::lang.tags.labels.is_approved
+            tab: dynamedia.posts::lang.common.tabs.settings
+            type: switch
+            default: false
+
+        post_list_options:
+            tab: dynamedia.posts::lang.common.tabs.settings
+            type: nestedform
+            usePanelStyles: false
+            form: $/dynamedia/posts/config/forms/tag_post_list_options.yaml

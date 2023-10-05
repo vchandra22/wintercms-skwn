@@ -1,0 +1,12 @@
+1.0.1:
+    - 'First version of Slider'
+    - create_categories_table.php
+    - create_slides_table.php
+    - SeedAllData.php
+1.0.2:
+    - 'Adding injectScripts property'
+1.0.3:
+    - 'Adding css_class column'
+    - add_css_class_to_slides.php
+1.0.4:
+    - 'Swiper: upgrade to version 10'

@@ -1,0 +1,33 @@
+"1.0.0":
+    - First Version of Posts
+    - v1.0.0/create_posts_table.php
+    - v1.0.0/create_post_translations_table.php
+    - v1.0.0/create_post_slugs_table.php
+    - v1.0.0/create_categories_table.php
+    - v1.0.0/create_category_translations_table.php
+    - v1.0.0/create_category_slugs_table.php
+    - v1.0.0/create_tags_table.php
+    - v1.0.0/create_tag_translations_table.php
+    - v1.0.0/create_tag_slugs_table.php
+    - v1.0.0/create_profiles_table.php
+"1.0.1":
+    - Fix issue when saving models before settings have been completed
+"1.0.2":
+    - No locale prefix where only one language (i.e. Translate unused)
+"1.0.3":
+    - First version of Winter CMS supported fork
+"1.0.4":
+    - Fix link in documentation to point at Winter CMS demo theme
+"1.0.5":
+    - Restructure updates directory and fix version.yaml keys for php7 compatibility with Winter
+"1.0.6":
+    - Normalize plugin version history (remove v prefixed versions)
+    - v1.0.6/normalize_plugin_history.php
+"1.0.7":
+    - All backend strings are now translatable. Auto/demo Fr file included
+"1.0.8":
+    - Fix confusing settings. Allow and default page selection to None (for future API users)
+"1.0.9":
+    - Add French translation (@damsfx - Damien MATHIEU)
+"1.0.10":
+    - Update MediaLibrary references to support Winter's implementation

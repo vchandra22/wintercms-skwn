@@ -1,0 +1,9 @@
+name: "sekawan"
+description: "No description provided yet..."
+author: "Winter CMS Scaffold"
+homepage: "https://example.com"
+code: "sekawan"
+form:
+    fields:
+        googleanalytics_id:
+            label: 'Google Analytics ID'

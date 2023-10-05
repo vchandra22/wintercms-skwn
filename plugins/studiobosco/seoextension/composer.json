@@ -1,0 +1,19 @@
+{
+  "name": "studiobosco/wn-seo-extension",
+  "type": "winter-plugin",
+  "description": "SEO Extension for Winter CMS Pages",
+  "keywords": [
+    "winter",
+    "wintercms",
+    "seo"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.9",
+    "composer/installers": "~1.0"
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "installer-name": "seoextension"
+  }
+}

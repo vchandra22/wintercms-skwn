@@ -1,0 +1,73 @@
+[viewBag]
+==
+
+<div class="min-h-screen">
+	<div class="flex justify-center top-0 right-0 left-0 max-w-screen-xl mx-auto md:-mt-24 z-30">
+		<div class="w-full md:grid md:grid-cols-4 z-30">
+			<div class="w-full max-h-60 p-8 col-span-1 bg-[#102E61] rounded-none">
+				<div class="grid grid-cols-1 gap-4 content-between">
+					<div>
+
+						<h5 class="mb-2 text-xl font-bold pb-8 uppercase text-white">Informasi</h5>
+
+						<ul class="text-white font-medium text-md space-y-4">
+							<li><a href="#">Siaran Pers</a></li>
+							<li><a href="#">Events</a></li>
+							<li><a href="#">Blog</a></li>
+						</ul>
+					</div></div></div>
+			<div class="w-full col-span-3 bg-white rounded-none">
+				<div class="flex justify-end items-center space-x-0">
+					<a class="px-12 py-8 bg-gray-300 group transition duration-300 ease-in-out hover:bg-gray-400" href="#">
+						<div class="text-sm font-medium uppercase text-blue-900">Salin URL<i class="fa-regular fa-copy pl-2"></i></div>
+					</a>
+					<a class="px-12 py-8 bg-yellow-200 group transition duration-300 ease-in-out hover:bg-gray-400" href="#">
+						<div class="text-sm font-medium uppercase text-blue-900">Bagikan <i class="fa-solid fa-share-nodes pl-2"></i></div>
+					</a></div>
+				<div class="px-8">
+					<div class="block w-full p-6 bg-white space-y-4">
+
+						<h3 class="text-blue-900 text-4xl font-medium">Blog</h3>
+
+						<h3>
+							<br>
+						</h3>
+
+						<h5 class="text-gray-600 text-xl font-medium">Artikel seputar dunia bisnis, teknologi, informasi, dan komunikasi</h5>
+
+						<p class="text-gray-800 text-md font-normal">Artikel kami memberikan rekomendasi artikel blog terbaru untuk menambah wawasan dan pengetahuan seputar dunia bisnis, teknologi, informasi, dan komunikasi.</p>
+					</div>
+					{% component 'listPosts' %}
+					{# {% for post in posts %}
+						<div style="border: 1px solid #999; margin: 15px 0;padding:5px; min-height: 75px">
+							<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+							<p>{{ post.excerpt | raw }}</p>
+						</div>
+					{% endfor %} #}
+					<div class="mb-12 space-y-4">
+						<div>
+							<div class="block w-full bg-gray-100 shadow hover:bg-gray-200">
+								<div class="grid grid-cols-4">
+									<div class="col-span-1"><img src="/storage/app/media/blog_image_test.png" class="w-full h-full object-cover bg-cover fr-fil fr-dib" alt="" srcset="">
+										<br>
+									</div>
+									<div class="col-span-3 p-6 space-y-2" >
+										<h2 class="mb-2 text-2xl font-medium tracking-tight text-gray-600">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, mollitia.
+										</h2>
+										<div class="flex justify-start items-center space-x-4 text-gray-500">
+											<div class="flex items-center space-x-2"><i class="fa-solid fa-calendar-days"></i>
+
+												<p>18 August, 2018</p>
+											</div>
+											<div class="flex items-center space-x-2"><i class="fa-solid fa-user"></i>
+
+												<p>Salma Azzahidah</p>
+											</div></div>
+
+										<p class="font-normal text-gray-500">Lorem ipsum dolor sit amet consectetur adipiscing, elit luctus sem placerat maecenas facilisis hac, platea litora interdum diam laoreet...</p>
+										<div class="flex justify-between items-end">
+											<div class="relative group space-y-1"><a class="uppercase text-md font-medium w-1/4 text-blue-900" href="http://localhost:8000/blog-detail">Selengkapnya&nbsp;</a>
+												<div class="absolute left-0 right-0 h-[3px] bg-[#102E61] w-1/3 group-hover:transition group-hover:duration-1000 group-hover:ease-in-out group-hover:w-full">
+													<br>
+												</div></div></div></div></div></div></div></div></div></div></div></div></div>

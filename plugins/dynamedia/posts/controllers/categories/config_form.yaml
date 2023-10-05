@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: dynamedia.posts::lang.categories.titles.category
+
+# Model Form Field configuration
+form: $/dynamedia/posts/models/category/fields.yaml
+
+# Model Class name
+modelClass: Dynamedia\Posts\Models\Category
+
+# Default redirect location
+defaultRedirect: dynamedia/posts/categories
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: dynamedia/posts/categories/update/:id
+    redirectClose: dynamedia/posts/categories
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: dynamedia/posts/categories
+    redirectClose: dynamedia/posts/categories
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

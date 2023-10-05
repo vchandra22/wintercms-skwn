@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {# Reference the parent #}
+    <url>
+        <loc>{{ parent.url }}</loc>
+        <lastmod>{{ parent.updated_at }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {# List all of the posts in the collection #}
+    {% for post in posts %}
+        <url>
+            <loc>{{ post.url }}</loc>
+            <lastmod>{{ post.updated_at }}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+    {% endfor %}
+</urlset>

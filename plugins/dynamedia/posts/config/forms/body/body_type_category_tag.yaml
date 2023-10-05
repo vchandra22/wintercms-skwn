@@ -1,0 +1,23 @@
+fields:
+    body_type:
+        tab: dynamedia.posts::lang.common.tabs.body
+        label: dynamedia.posts::lang.common.labels.body_type
+        type: dropdown
+        options:
+            repeater_body: dynamedia.posts::lang.common.dropdown.body_type.repeater
+            richeditor_body: dynamedia.posts::lang.common.dropdown.body_type.richeditor
+            markdown_body: dynamedia.posts::lang.common.dropdown.body_type.markdown
+    repeater_body:
+        dependsOn: body_type
+        type: repeater
+        groups: $/dynamedia/posts/config/forms/body/repeater_body/category_tag.yaml
+    richeditor_body:
+        dependsOn: body_type
+        type: richeditor
+        size: giant
+    markdown_body:
+        dependsOn: body_type
+        type: markdown
+        size: giant
+        legacyMode: true
+    # Easy to add/remove body types...

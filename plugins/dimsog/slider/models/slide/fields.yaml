@@ -1,0 +1,57 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    active:
+        type: switch
+        label: dimsog.slider::lang.models.slide.form.active
+        default: 1
+    category:
+        label: dimsog.slider::lang.models.slide.form.category
+        showSearch: true
+        required: 1
+        type: relation
+    name:
+        label: dimsog.slider::lang.models.slide.form.name
+        required: 1
+        span: auto
+    sub_name:
+        label: dimsog.slider::lang.models.slide.form.sub_name
+        span: auto
+tabs:
+    fields:
+        image:
+            tab: dimsog.slider::lang.models.slide.form.image
+            label: dimsog.slider::lang.models.slide.form.image
+            mode: image
+            type: fileupload
+            span: auto
+            thumbOptions:
+                mode: crop
+                extension: auto
+        mobile_image:
+            tab: dimsog.slider::lang.models.slide.form.image
+            label: dimsog.slider::lang.models.slide.form.mobile_image
+            mode: image
+            type: fileupload
+            span: auto
+            thumbOptions:
+                mode: crop
+                extension: auto
+        link:
+            tab: dimsog.slider::lang.models.slide.form.link
+            label: dimsog.slider::lang.models.slide.form.link
+            span: auto
+        button_text:
+            tab: dimsog.slider::lang.models.slide.form.link
+            label: dimsog.slider::lang.models.slide.form.button_text
+            span: auto
+        text:
+            tab: dimsog.slider::lang.models.slide.form.text
+            label: dimsog.slider::lang.models.slide.form.text
+            type: richeditor
+            size: giant
+        css_class:
+            tab: dimsog.slider::lang.models.slide.form.css
+            label: dimsog.slider::lang.models.slide.form.css_class

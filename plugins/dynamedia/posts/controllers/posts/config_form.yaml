@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: dynamedia.posts::lang.posts.titles.post
+
+# Model Form Field configuration
+form: $/dynamedia/posts/models/post/fields.yaml
+
+# Model Class name
+modelClass: Dynamedia\Posts\Models\Post
+
+# Default redirect location
+defaultRedirect: dynamedia/posts/posts
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: dynamedia/posts/posts/update/:id
+    redirectClose: dynamedia/posts/posts
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: dynamedia/posts/posts
+    redirectClose: dynamedia/posts/posts
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

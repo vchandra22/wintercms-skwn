@@ -1,0 +1,16 @@
+thing:
+    # https://schema.org/Thing
+    name: dynamedia.posts::lang.seo.schema.names.thing
+    description: dynamedia.posts::lang.seo.schema.descriptions.thing
+    # field keys to exacty match Spatie Schema-org properties
+    fields:
+        name:
+            label: dynamedia.posts::lang.seo.schema.labels.thing_name
+        description:
+            label: dynamedia.posts::lang.seo.schema.labels.thing_description
+        image:
+            label: dynamedia.posts::lang.seo.schema.labels.thing_image
+            type: mediafinder
+        sameAs:
+            label: dynamedia.posts::lang.seo.schema.labels.thing_same_as
+            comment: dynamedia.posts::lang.seo.schema.comments.thing_same_as

@@ -1,0 +1,174 @@
+tabs:
+    defaultTab: 'Meta'
+    fields:
+
+
+        #----------------------------------------------------------------------
+        # Meta Tab
+        #----------------------------------------------------------------------
+        enable_site_meta:
+            label: 'Enable title and description meta tags'
+            span: auto
+            type: switch
+            tab: Meta
+            default: true
+        enable_sitemap:
+            label: 'Enable sitemap.xml'
+            span: auto
+            type: switch
+            tab: Meta
+            default: true
+        site_name:
+            label: 'Site name'
+            span: left
+            placeholder: 'Your site name'
+            type: text
+            tab: Meta
+        site_name_position:
+            label: 'Site name display'
+            options:
+                prefix: 'Prefix (at the start)'
+                suffix: 'Suffix (at the end)'
+                nowhere: 'Nowhere (does not appear)'
+            span: auto
+            type: radio
+            commentAbove: 'Select how the site name should appear in the title'
+            tab: Meta
+        site_name_separator:
+            label: 'Site name separator'
+            span: auto
+            type: text
+            comment: 'Character to separate site name from title, eg: Page Title | SiteName'
+            placeholder: '|'
+            tab: Meta
+        site_description:
+            label: Default description
+            size: tiny
+            span: full
+            placeholder: 'Your site description'
+            type: textarea
+            tab: Meta
+            comment: '[data-counter]'
+            attributes:
+                data-counter: 1
+                data-min: 100
+                data-max: 160
+
+        #----------------------------------------------------------------------
+        # <head> Tab
+        #----------------------------------------------------------------------
+        extra_meta:
+            label: 'Additional <head> content'
+            size: huge
+            language: html
+            span: full
+            type: codeeditor
+            tab: <head>
+            default: "<!-- Additional meta tags -->"
+
+
+        #----------------------------------------------------------------------
+        # Robots Tab
+        #----------------------------------------------------------------------
+        enable_robots_txt:
+            label: 'Enable robots.txt'
+            span: auto
+            type: switch
+            tab: Robots
+            default: true
+        enable_robots_meta:
+            label: 'Enable robots meta tags'
+            span: auto
+            type: switch
+            tab: Robots
+            default: true
+        robots_txt:
+            label: robots.txt
+            size: huge
+            language: plain_text
+            span: full
+            disabled: 0
+            hidden: 0
+            type: codeeditor
+            tab: Robots
+            default: "User-agent: *\r\nAllow: /"
+
+        #----------------------------------------------------------------------
+        # Favicon
+        #----------------------------------------------------------------------
+        favicon_enabled:
+            label: Enable favicon.ico
+            comment: This will generate a route to /favicon.ico
+            type: switch
+            default: false
+            tab: Favicon
+        favicon_16:
+            label: Resize favicon to 16x16
+            type: checkbox
+            default: false
+            tab: Favicon
+        favicon:
+            label: Select your favicon
+            type: mediafinder
+            mode: image
+            prompt: Click %s to search the media library
+            tab: Favicon
+
+        #----------------------------------------------------------------------
+        # .htacess
+        #----------------------------------------------------------------------
+        htaccess:
+            label: Edit your .htaccess
+            comment: <b class="text-danger">Important:</b> If you use this, do not modify your file directly, because this field is in sync with the database aswell.
+            commentHtml: true
+            type: codeeditor
+            size: huge
+            tab: .htaccess
+
+        #----------------------------------------------------------------------
+        # HTTP Headers
+        #----------------------------------------------------------------------
+
+        #----------------------------------------------------------------------
+        # og Tab
+        #----------------------------------------------------------------------
+        enable_og:
+            label: 'Enable Open Graph'
+            comment: 'Display the Open Graph meta tags'
+            type: switch
+            tab: Open Graph
+            default: true
+        site_image:
+            label: 'Site image'
+            mode: image
+            prompt: 'Drag files or click here'
+            hidden: 0
+            trigger:
+                action: enable
+                field: enable_og
+                condition: checked
+            type: mediafinder
+            tab: Open Graph
+        fb_app_id:
+            label: 'Facebook App ID'
+            disabled: 0
+            trigger:
+                action: enable
+                field: enable_og
+                condition: checked
+            type: text
+            span: left
+            comment: 'The fb:app_id OG tag'
+            tab: Open Graph
+        og_locale:
+            label: 'og:locale'
+            trigger:
+                action: enable
+                field: enable_og
+                condition: checked
+            type: text
+            span: left
+            commentHtml: true
+            comment: 'Set the locale of your site for social media. <a target="__blank" href="http://ogp.me/#optional">Click here for more info.</a>'
+            tab: Open Graph
+

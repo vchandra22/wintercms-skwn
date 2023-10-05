@@ -1,0 +1,52 @@
+tabs:
+    fields:
+        default:
+            tab: dynamedia.posts::lang.images.tabs.default
+            type: mediafinder
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+        caption:
+            tab: dynamedia.posts::lang.images.tabs.default
+            #label: dynamedia.posts::lang.images.labels.alt_text
+            label: dynamedia.posts::lang.images.labels.caption
+        alt:
+            tab: dynamedia.posts::lang.images.tabs.default
+            label: dynamedia.posts::lang.images.labels.alt_text
+        class:
+            tab: dynamedia.posts::lang.images.tabs.default
+            label: dynamedia.posts::lang.images.labels.css_class
+        responsive:
+            tab: dynamedia.posts::lang.images.tabs.responsive
+            type: repeater
+            form:
+                fields:
+                    image:
+                        type: mediafinder
+                        mode: image
+                        imageHeight: 260
+                        imageWidth: 260
+                    media_query:
+                        span: left
+                        label: dynamedia.posts::lang.images.labels.media_query
+                        type: dropdown
+                        options:
+                            max-width: dynamedia.posts::lang.images.options.max_width
+                            min-width: dynamedia.posts::lang.images.options.min_width
+                    screen_width:
+                        span: right
+                        label: dynamedia.posts::lang.images.labels.screen_width
+                        type: number
+        _preview_refresh:
+            tab: dynamedia.posts::lang.common.tabs.preview
+            type: switch
+            label: dynamedia.posts::lang.common.labels.refresh
+            span: right
+            cssClass: preview_button
+
+        _preview:
+            tab: dynamedia.posts::lang.common.tabs.preview
+            type: partial
+            path: $/dynamedia/posts/views/repeaterbody/preview/_image_block_preview.htm
+            dependsOn: _preview_refresh
+

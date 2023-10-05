@@ -1,0 +1,15 @@
+# ===================================
+#  Import/Export Behavior Config
+# ===================================
+
+import:
+    title: winter.redirect::lang.title.import
+    modelClass: Winter\Redirect\Models\RedirectImport
+    list: $/winter/redirect/models/redirectimport/columns.yaml
+    redirect: winter/redirect/redirects
+export:
+    title: winter.redirect::lang.title.export
+    modelClass: Winter\Redirect\Models\RedirectExport
+    list: $/winter/redirect/models/redirectexport/columns.yaml
+    redirect: winter/redirect/redirects
+    filename: redirects.csv

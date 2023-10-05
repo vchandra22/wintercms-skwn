@@ -1,0 +1,46 @@
+{% set post = __SELF__.post %}
+{% set paginator = __SELF__.paginator %}
+
+<p>
+    This plugin component ({{ __SELF__.alias }}) provides default markup as a convenience to developers but should be overridden by the theme (<a href="https://wintercms.com/docs/cms/components#overriding-partials" target="_blank">Winter CMS Docs</a>).
+    <br>
+    <br>
+    To view and download a completed theme to help with implementation, please see <a href="https://posts-plugin.dynamedia.uk" target="_blank">posts-plugin.dynamedia.uk</a> and <a href="https://github.com/Dynamedia/oc-posts-demo" target="_blank">Github</a>.
+    The demo theme is MIT licensed and is therefore free to modify and redistribute.
+</p>
+
+{% if post.is_published %}
+    <small>
+        By <a href="{{ post.author.profile.url }}">{{ post.author.first_name }} {{ post.author.last_name }}</a>,
+        on {{ post.published_at | date('d-m-Y') }}
+        {% if post.primary_category %}
+            in <a href="{{ post.primary_category.url }}">{{ post.primary_category.name }}</a>
+        {% endif %}
+        {% if post.updated_at > post.published_at %}
+            <br>Last updated {{ post.updated_at | date('d-m-Y') }}
+        {% endif %}
+
+        {### INFO FOR MULTI-PAGE POSTS ###}
+        {% if post.pages | length > 1 %}
+            <p>Page {{ __SELF__.getRequestedPage }} of {{ post.pages | length }}</p>
+        {% endif %}
+    </small>
+{% endif %}
+
+{% if post.contents_list | length > 0 %}
+    <h4 style="border:1px solid #999; margin: 15px 0; padding: 5px">
+            Contents
+    </h4>
+    <ul>
+        {% for section in post.contents_list %}
+            <li><a href="{{ section.url }}">{{ section.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+{{ post.body.renderPage(paginator.currentPage) | raw  }}
+
+{% if paginator.total > 0 %}
+    {{ paginator.links() | raw }}
+{% endif %}

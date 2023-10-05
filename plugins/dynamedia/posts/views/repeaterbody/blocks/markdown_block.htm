@@ -1,0 +1,13 @@
+<div {{ (block_id) ? 'id=' ~ block_id : '' }} class="dynamedia-posts body repeater-block markdown-block">
+    {% if image and image_style != 'full-below' %}
+        {{ image | raw }}
+    {% endif %}
+
+    {% if content %}
+        {{ content | md }}
+    {% endif %}
+
+    {% if image and image_style == 'full-below' %}
+        {{ image | raw }}
+    {% endif %}
+</div>

@@ -1,0 +1,4 @@
+static-pages:
+    pages-static:
+        pages-static-sub-static-page: {  }
+    home-2: {  }

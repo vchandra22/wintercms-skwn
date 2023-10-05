@@ -1,0 +1,17 @@
+==
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ this.page.meta_description|default(this.theme.description) }}">
+<meta name="keywords" content="{{ this.theme.keywords }}">
+<meta name="author" content="{{ this.theme.site_author }}">
+<title>{{ this.theme.site_name|striptags }} - {{ this.page.meta_title|default(this.page.title) }}</title>
+<link rel="canonical" href="{{ this.page.id|page }}" />
+<link rel="icon" type="image/png" href="{{ 'assets/img/icon.png'|theme }}" />
+
+<!--[if lte IE 8]><script src="{{ 'assets/js/ie/html5shiv.js'|theme }}"></script><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="{{ ['assets/css/ie9.css']|theme }}" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="{{ ['assets/css/ie8.css']|theme }}" /><![endif]-->
+<link href="{{ ['assets/css/main.css',
+            '@framework.extras']|theme }}" rel="stylesheet">
+{% styles %}

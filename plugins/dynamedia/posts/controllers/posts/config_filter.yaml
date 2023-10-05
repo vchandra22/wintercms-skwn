@@ -1,0 +1,31 @@
+scopes:
+    categories:
+        label: dynamedia.posts::lang.common.labels.categories
+        modelClass: Dynamedia\Posts\Models\Category
+        scope: applyWhereHasCategories
+        nameFrom: name
+        valueFrom: id
+
+    tags:
+        label: dynamedia.posts::lang.common.labels.tags
+        modelClass: Dynamedia\Posts\Models\Tag
+        scope: applyWhereHasTags
+        nameFrom: name
+        valueFrom: id
+
+    hide_published:
+        label: dynamedia.posts::lang.posts.labels.hide_published
+        scope: applyIsNotPublished
+        type: checkbox
+
+    author_by_profile:
+
+    editor_by_profile:
+
+    published_at:
+        label: dynamedia.posts::lang.posts.labels.publishing_date
+        type: daterange
+        conditions: created_at >= ':after' AND created_at <= ':before'
+
+
+

@@ -1,0 +1,22 @@
+{% set posts = __SELF__.posts %}
+
+<p>
+    This plugin component ({{ __SELF__.alias }}) provides default markup as a convenience to developers but should be overridden by the theme (<a href="https://wintercms.com/docs/cms/components#overriding-partials" target="_blank">Winter CMS Docs</a>).
+    <br>
+    <br>
+    To view and download a completed theme to help with implementation, please see <a href="https://posts-plugin.dynamedia.uk" target="_blank">posts-plugin.dynamedia.uk</a> and <a href="https://github.com/Dynamedia/oc-posts-demo" target="_blank">Github</a>.
+    The demo theme is MIT licensed and is therefore free to modify and redistribute.
+</p>
+
+<h2>Post List</h2>
+
+{% for post in posts %}
+    <div style="border: 1px solid #999; margin: 15px 0;padding:5px; min-height: 75px">
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | raw }}</p>
+    </div>
+{% endfor %}
+
+{% if posts.links %}
+    {{ posts.links() | raw }}
+{% endif %}

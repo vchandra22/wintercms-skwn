@@ -1,0 +1,48 @@
+secondaryTabs:
+    fields:
+        default:
+            tab: dynamedia.posts::lang.images.tabs.default
+            label: dynamedia.posts::lang.images.labels.image_select
+            span: left
+            type: mediafinder
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+        image_style:
+            tab: dynamedia.posts::lang.images.tabs.default
+            span: right
+            label: dynamedia.posts::lang.images.labels.image_style
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getImageStyleOptions
+        caption:
+            tab: dynamedia.posts::lang.images.tabs.default
+            label: dynamedia.posts::lang.images.labels.caption
+        alt:
+            tab: dynamedia.posts::lang.images.tabs.default
+            label: dynamedia.posts::lang.images.labels.alt_text
+        class:
+            tab: dynamedia.posts::lang.images.tabs.default
+            label: dynamedia.posts::lang.images.labels.css_class
+        responsive:
+            tab: dynamedia.posts::lang.images.tabs.responsive
+            type: repeater
+            form:
+                fields:
+                    image:
+                        type: mediafinder
+                        mode: image
+                        imageHeight: 260
+                        imageWidth: 260
+                    media_query:
+                        span: left
+                        label: dynamedia.posts::lang.images.labels.media_query
+                        type: dropdown
+                        options:
+                            max-width: dynamedia.posts::lang.images.options.max_width
+                            min-width: dynamedia.posts::lang.images.options.min_width
+                    screen_width:
+                        span: right
+                        label: dynamedia.posts::lang.images.labels.screen_width
+                        type: number
+
+

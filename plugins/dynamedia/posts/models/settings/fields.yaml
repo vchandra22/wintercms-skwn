@@ -1,0 +1,107 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+tabs:
+    stretch: true
+    fields:
+        postPage:
+            tab: dynamedia.posts::lang.settings.tabs.posts
+            label: dynamedia.posts::lang.settings.labels.post_page
+            type: dropdown
+
+        categoryPage:
+            tab: dynamedia.posts::lang.settings.tabs.categories
+            label: dynamedia.posts::lang.settings.labels.category_page
+            type: dropdown
+
+        categoryPostsListSortOrder:
+            tab: dynamedia.posts::lang.settings.tabs.categories
+            label: dynamedia.posts::lang.settings.labels.default_posts_sort_order
+            type: dropdown
+            default: 'published_at desc'
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getDefaultPostListSortOptions
+
+        categoryPostsListIncludeSubcategories:
+            tab: dynamedia.posts::lang.settings.tabs.categories
+            label: dynamedia.posts::lang.settings.labels.include_subcategories
+            type: dropdown
+            default: false
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getDefaultPostListIncludeSubCategoriesOptions
+
+        categoryPostsListPerPage:
+            tab: dynamedia.posts::lang.settings.tabs.categories
+            label: dynamedia.posts::lang.settings.labels.posts_per_page
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getDefaultPostListPerPageOptions
+            default: 10
+
+        tagPage:
+            tab: dynamedia.posts::lang.settings.tabs.tags
+            label: dynamedia.posts::lang.settings.labels.tag_page
+            type: dropdown
+
+        tagPostsListSortOrder:
+            tab: dynamedia.posts::lang.settings.tabs.tags
+            label: dynamedia.posts::lang.settings.labels.default_posts_sort_order
+            type: dropdown
+            default: 'published_at desc'
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getDefaultPostListSortOptions
+
+        tagPostsListPerPage:
+            tab: dynamedia.posts::lang.settings.tabs.tags
+            label: dynamedia.posts::lang.settings.labels.posts_per_page
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getDefaultPostListPerPageOptions
+            default: 10
+
+        userPage:
+            tab: dynamedia.posts::lang.settings.tabs.users
+            label: dynamedia.posts::lang.settings.labels.user_page
+            type: dropdown
+
+        userPostsListSortOrder:
+            tab: dynamedia.posts::lang.settings.tabs.users
+            label: dynamedia.posts::lang.settings.labels.default_posts_sort_order
+            type: dropdown
+            default: 'published_at desc'
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getDefaultPostListSortOptions
+
+        userPostsListPerPage:
+            tab: dynamedia.posts::lang.settings.tabs.users
+            label: dynamedia.posts::lang.settings.labels.posts_per_page
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getDefaultPostListPerPageOptions
+            default: 10
+
+        defaultPostLayout:
+            tab: dynamedia.posts::lang.settings.tabs.cms_layouts
+            label: dynamedia.posts::lang.settings.labels.default_post_layout
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getCmsLayoutOptions
+
+        defaultCategoryLayout:
+            tab: dynamedia.posts::lang.settings.tabs.cms_layouts
+            label: dynamedia.posts::lang.settings.labels.default_category_layout
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getCmsLayoutOptions
+
+        defaultTagLayout:
+            tab: dynamedia.posts::lang.settings.tabs.cms_layouts
+            label: dynamedia.posts::lang.settings.labels.default_tag_layout
+            type: dropdown
+            options: \Dynamedia\Posts\Classes\Helpers\Form::getCmsLayoutOptions
+
+        rssTitle:
+            tab: dynamedia.posts::lang.settings.tabs.rss
+            label: dynamedia.posts::lang.settings.labels.rss_title
+        rssDescription:
+            tab: dynamedia.posts::lang.settings.tabs.rss
+            label: dynamedia.posts::lang.settings.labels.rss_description
+            type: richeditor
+        rssPostCount:
+            tab: dynamedia.posts::lang.settings.tabs.rss
+            label: dynamedia.posts::lang.settings.labels.rss_posts_per_feed
+            type: dropdown
+
+
+

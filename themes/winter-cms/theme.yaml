@@ -1,0 +1,9 @@
+name: 'Winter CMS'
+description: 'Custom theme generated for http://localhost:8000/'
+author: 'Admin Person'
+homepage: 'http://localhost:8000/'
+code: winter-cms
+form:
+    fields:
+        googleanalytics_id:
+            label: 'Google Analytics ID'

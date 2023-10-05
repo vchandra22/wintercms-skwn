@@ -1,0 +1,87 @@
+tabs:
+  fields:
+    use_for_blog_posts:
+      label: studiobosco.seoextension::lang.settings.tab_settings.use_for_blog_posts
+      type: switch
+      span: left
+      tab: studiobosco.seoextension::lang.settings.tab_settings.label
+    enable_title:
+      label: studiobosco.seoextension::lang.settings.tab_settings.site
+      comment: studiobosco.seoextension::lang.settings.tab_settings.site_comment
+      type: switch
+      span: left
+      tab: studiobosco.seoextension::lang.settings.tab_settings.label
+
+    enable_canonical_url:
+      label: studiobosco.seoextension::lang.settings.tab_settings.canonical
+      type: switch
+      comment: studiobosco.seoextension::lang.settings.tab_settings.canonical_comment
+      tab: studiobosco.seoextension::lang.settings.tab_settings.label
+      span: right
+
+    title:
+      label: studiobosco.seoextension::lang.settings.tab_settings.sitename
+      commentAbove: studiobosco.seoextension::lang.settings.tab_settings.sitename_comment_above
+      span: left
+      comment: studiobosco.seoextension::lang.settings.tab_settings.sitename_comment
+      tab: studiobosco.seoextension::lang.settings.tab_settings.label
+      placeholder: studiobosco.seoextension::lang.settings.tab_settings.sitename_placeholder
+
+    title_position:
+      label: studiobosco.seoextension::lang.settings.tab_settings.title_position
+      type: radio
+      span: right
+      tab: studiobosco.seoextension::lang.settings.tab_settings.label
+      comment: studiobosco.seoextension::lang.settings.tab_settings.title_position_comment
+      options:
+        prefix: studiobosco.seoextension::lang.settings.tab_settings.title_position_prefix
+        suffix: studiobosco.seoextension::lang.settings.tab_settings.title_position_suffix
+
+    hide_static_page_meta_fields:
+        label: studiobosco.seoextension::lang.settings.tab_settings.hide_static_page_meta_fields
+        type: switch
+        span: left
+        tab: studiobosco.seoextension::lang.settings.tab_settings.label
+
+    content:
+      type: hint
+      path: $/studiobosco/seoextension/models/settings/_other_tags_hint.htm
+      tab: studiobosco.seoextension::lang.settings.tab_settings.label
+
+    other_tags:
+      label: studiobosco.seoextension::lang.settings.tab_settings.other_tags
+      type: codeeditor
+      tab: studiobosco.seoextension::lang.settings.tab_settings.label
+      commentAbove: studiobosco.seoextension::lang.settings.tab_settings.other_tags_comment_above
+      comment: studiobosco.seoextension::lang.settings.tab_settings.other_tags_comment
+
+    og_tags_description:
+      type: hint
+      path: $/studiobosco/seoextension/models/settings/_og_tags_description.htm
+      tab: studiobosco.seoextension::lang.settings.tab_og.label
+
+    enable_og_tags:
+      label: studiobosco.seoextension::lang.settings.tab_og.og
+      type: switch
+      comment: studiobosco.seoextension::lang.settings.tab_og.og_comment
+      tab: studiobosco.seoextension::lang.settings.tab_og.label
+
+    og_sitename:
+      label: studiobosco.seoextension::lang.settings.tab_og.sitename
+      type: text
+      comment: studiobosco.seoextension::lang.settings.tab_og.sitename_comment
+      tab: studiobosco.seoextension::lang.settings.tab_og.label
+
+    og_fb_appid:
+      label: studiobosco.seoextension::lang.settings.tab_og.fb
+      comment: studiobosco.seoextension::lang.settings.tab_og.fb_comment
+      type: text
+      span: left
+      tab: studiobosco.seoextension::lang.settings.tab_og.label
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: winter.redirect::lang.redirect.category
+
+# Model Form Field configuration
+form: $/winter/redirect/models/category/fields.yaml
+
+# Model Class name
+modelClass: Winter\Redirect\Models\Category
+
+# Default redirect location
+defaultRedirect: winter/redirect/categories
+
+# Create page
+create:
+    title: winter.redirect::lang.title.create_category
+    redirect: winter/redirect/categories/update/:id
+    redirectClose: winter/redirect/categories
+
+# Update page
+update:
+    title: winter.redirect::lang.title.edit_category
+    redirect: winter/redirect/categories
+    redirectClose: winter/redirect/categories

@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: winter.redirect::lang.redirect.redirect
+
+# Model Form Field configuration
+form: $/winter/redirect/models/redirect/fields.yaml
+
+# Model Class name
+modelClass: Winter\Redirect\Models\Redirect
+
+# Default redirect location
+defaultRedirect: winter/redirect/redirects
+
+# Create page
+create:
+    title: winter.redirect::lang.title.create_redirect
+    redirect: winter/redirect/redirects/update/:id
+    redirectClose: winter/redirect/redirects
+
+# Update page
+update:
+    title: winter.redirect::lang.title.edit_redirect
+    redirect: winter/redirect/redirects
+    redirectClose: winter/redirect/redirects

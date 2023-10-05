@@ -1,0 +1,12 @@
+[viewBag]
+==
+<div class="sticky bg-white border-b border-gray-300 topbar">
+    <div
+        class="flex flex-wrap items-center max-w-screen-xl p-2 mx-auto space-x-4 text-[12px] min-h-[50px] font-semibold text-center text-gray-400 uppercase">
+        <div class="space-x-2 uppercase">
+            {% for item in items %}
+                <a href="{{ item.url }}" class="hover:text-gray-800"> {{ item.title }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
