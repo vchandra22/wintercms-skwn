@@ -8,7 +8,6 @@ use Skripteria\Snowflake\Classes\EnumFieldType;
 use Skripteria\Snowflake\Models\Layout;
 use Skripteria\Snowflake\Models\Page;
 use Winter\Storm\Support\Facades\Markdown;
-use Winter\Storm\Support\Str;
 
 class SfPage extends ComponentBase
 {

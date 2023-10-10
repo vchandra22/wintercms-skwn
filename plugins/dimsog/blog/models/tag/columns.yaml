@@ -1,0 +1,12 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: dimsog.blog::lang.models.tag.columns.id
+        searchable: true
+        width: '100px'
+    name:
+        label: dimsog.blog::lang.models.tag.columns.name
+        searchable: true

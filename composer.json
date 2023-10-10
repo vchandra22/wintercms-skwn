@@ -51,7 +51,8 @@
         "winter/wn-redirect-plugin": "^4.0",
         "winter/wn-sitemap-plugin": "^2.0",
         "as-milano/wn-seo-plugin": "dev-master",
-        "josephcrowell/wn-sitemappretty-plugin": "^2.1"
+        "josephcrowell/wn-sitemappretty-plugin": "^2.1",
+        "dimsog/wn-blog-plugin": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5.8",

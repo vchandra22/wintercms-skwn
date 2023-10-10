@@ -1,0 +1,14 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: dimsog.blog::lang.models.category.fields.name
+        required: true
+    slug:
+        label: dimsog.blog::lang.models.category.fields.slug
+        preset:
+            field: name
+            type: slug
+        required: true

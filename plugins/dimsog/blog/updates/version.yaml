@@ -1,0 +1,34 @@
+1.0.1:
+    - 'First version'
+    - create_categories_table.php
+    - create_post_types_table.php
+    - create_tags_table.php
+    - create_posts_table.php
+    - create_post_tags_table.php
+    - CategorySeeder.php
+    - TagsSeeder.php
+1.0.2:
+    - 'Add views to posts'
+    - add_views_to_posts.php
+1.0.3:
+    - 'Remove crop mode from preview'
+    - 'Add image to status'
+1.0.4:
+    - create_post_blocks_table.php
+    - change_post_tags_table.php
+    - move_text_to_blocks.php
+    - remove_post_types_table.php
+    - 'New: a post blocks'
+    - 'New: minor code improvements'
+    - 'Removed: post_types table'
+1.0.5:
+    - 'Fix: text to blocks migration'
+1.0.6:
+    - 'Fix: remove transaction'
+1.0.7:
+    - PostSeeder.php
+    - 'New: add the default post'
+1.0.8:
+    - 'Minor code improvements'
+1.0.9:
+    - 'Fix PostsList.php'
